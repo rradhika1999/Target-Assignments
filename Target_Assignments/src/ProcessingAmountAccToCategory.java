@@ -3,11 +3,15 @@ package Session7.ShoppingCart;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+// Demonstration of inheritance in Java
 public class ProcessingAmountAccToCategory implements ProcessingAmount
 {
+    // Declaration and initialization of variables
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     int selection, total_amt, amt, no_of_items, no_of_sofa = 5, no_of_table = 5, no_of_spices = 5, no_of_oranges = 10, no_of_Bluetooth_Speaker = 5, no_of_television = 5,total = 0;
     int price_of_sofa = 50000, price_of_table = 25000, price_of_spice = 250, price_of_orange = 15, price_of_Bluetooth_Speaker = 7000, price_of_television = 90000;
+    
+    // Method definition to process amount for furniture
     public int ProcessTheAmountForFurniture(int selection)throws Exception
     {
         Scanner s = new Scanner(System.in);
@@ -47,6 +51,8 @@ public class ProcessingAmountAccToCategory implements ProcessingAmount
         }
         return total;
     }
+    
+    // Method definition to process amount for groceries
     public int ProcessTheAmountForGroceries(int selection) throws Exception {
         Scanner s = new Scanner(System.in);
         if(selection == 1)
@@ -85,6 +91,8 @@ public class ProcessingAmountAccToCategory implements ProcessingAmount
         }
         return total;
     }
+    
+    // Method definition to process amount for Electronics
     public int ProcessTheAmountForElectronics(int selection) throws Exception
     {
         Scanner s = new Scanner(System.in);
