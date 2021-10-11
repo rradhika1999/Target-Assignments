@@ -4,12 +4,17 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+// Class definition
 public class ShopFromMenu
 {
     int choice, selection, amt;
     float total_amt;
+
+    // Initializing an empty queue
     public static Queue<String> items = new LinkedList<>();
     ShoppingMain m = new ShoppingMain();
+    
+    // Method definition for diplaying the menu
     public void Display() throws Exception
     {
         Scanner sc = new Scanner(System.in);
@@ -21,6 +26,8 @@ public class ShopFromMenu
         choice = sc.nextInt();
         DisplayChoice(choice);
     }
+    
+    // Method definition to continue shopping
     public void ContinueShopping() throws Exception {
         //total_amt += amt;
         Scanner s = new Scanner(System.in);
@@ -75,6 +82,8 @@ public class ShopFromMenu
             m.quit(total_amt);
         }
     }
+    
+    // Method definition to display user with the list of choices
     public void DisplayChoice(int choice) throws Exception
     {
         Scanner s = new Scanner(System.in);
